@@ -1,0 +1,60 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <title>Cuenta Corriente</title>
+</head>
+<body>
+    <div>
+        <div class="container">
+            <h1>Mi cuenta corriente</h1>
+        </div>
+        <div class="container">
+            <div class="alert alert-warning" role="alert">
+                Balance total:
+                <span id="balanceTotal"></span>
+              </div>
+        </div>
+        <div>
+            <div>
+                <div class="container">
+                    
+                    <table class="table table-bordered table-striped">
+                      <thead>
+                        <tr>
+                          <th>Fecha de Movimiento</th>
+                          <th>Monto</th>
+                          <th type="number">Balance Parcial</th>
+                        </tr>
+                      </thead>
+                      <tbody id="table">
+                            
+                        
+                      </tbody>
+                    </table>
+                  </div>
+            </div>
+
+                <!--verificar la seccion de abajo y comparar con la de form-->
+                <div class="container">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">$</span>
+                        </div>
+                        <input id="input" type="number" class="form-control" aria-label="Amount (to the nearest dollar)">
+                    </div>
+                </div>
+                <div class="container ">
+                    <button onclick="agregaRow(1)" class="colum-sm btn btn-success ">Depósito</button>
+                    <button onclick="agregaRow(-1)" class="colum-sm btn btn-danger">Extracción</button>
+                </div>
+              
+        </div>
+
+
+
+    </div>
+    <script type="text/javascript" src="calculos.js"></script>
+</body>
+</html>
